@@ -20,6 +20,18 @@ EKS Cluster Autoscaler is a Kubernetes component that automatically adjusts the 
 To check the existing node group details, run:
 ```sh
 aws eks describe-nodegroup --cluster-name <cluster-name> --nodegroup-name <node-group-name>
+
+To check nodegroup:-
+aws eks list-nodegroups --cluster-name <cluster-name> --region ap-south-1
+eg:-
+aws eks list-nodegroups --cluster-name eks-cluster1 --region ap-south-1
+
+or
+eksctl get nodegroup --cluster <cluster-name> --region ap-south-1
+eg:-
+eksctl get nodegroup --cluster eks-cluster1 --region ap-south-1
+
+
 ```
 This command provides information about the current node group, including its scaling configuration, IAM roles, and status.
 
