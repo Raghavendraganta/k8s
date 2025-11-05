@@ -39,7 +39,8 @@ This command provides information about the current node group, including its sc
 
 ### **Step 2: Attach IAM Policy for Cluster Autoscaler**  
 EKS worker nodes need proper IAM permissions to manage Auto Scaling Groups (ASG). Attach the **AmazonEKSClusterAutoscalerPolicy** to the IAM role of your worker nodes.
-
+1) attach autoscaling policy to nodes
+2) increase max capacity in Autoscaling Group
 ---
 
 ### **Step 3: Install Cluster Autoscaler using Helm**  
